@@ -183,3 +183,4 @@ vim.keymap.set("n", "<leader>df", function()
         print("Erro ao excluir o arquivo: " .. tostring(err))
     end
 end)
+
