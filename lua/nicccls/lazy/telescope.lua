@@ -36,7 +36,7 @@ local function toggle_telescope(harpoon_files)
     }):find()
 end
 
-vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
+vim.keymap.set("n", "<C-m>", function() toggle_telescope(harpoon:list()) end,
     { desc = "Open harpoon window" })
 
 
@@ -55,16 +55,16 @@ vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
             current_line = vim.fn.trim(current_line)
             require('telescope.builtin').current_buffer_fuzzy_find({ default_text = current_line, case_sensitive = true })
         end)
-        vim.keymap.set('n', '<leader>pws', function()
+        vim.keymap.set('n', '<leader>wf', function()
             local word = vim.fn.expand("<cword>")
             require('telescope.builtin').grep_string({ default_text = word, case_sensitive = true })
         end)
-        vim.keymap.set('n', '<leader>PWS', function()
+        vim.keymap.set('n', '<leader>lf', function()
             local current_line = vim.fn.getline(".")
             current_line = vim.fn.trim(current_line)
             builtin.grep_string({ search = current_line, case_sensitive = true })
         end)
-        vim.keymap.set('n', '<leader>ps', function()
+        vim.keymap.set('n', '<leader>ws', function()
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})

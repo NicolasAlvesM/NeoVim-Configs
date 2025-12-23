@@ -6,6 +6,10 @@ return {
                 icons = false,
             })
 
+            vim.keymap.set("n", "<leader>qq", "<cmd>TroubleToggle quickfix<cr>",
+                 {silent = true, noremap = true}
+            )
+
             vim.keymap.set("n", "<leader>tt", function()
                 require("trouble").toggle()
             end)

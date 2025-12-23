@@ -2,10 +2,10 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<M-Down>", ":m .+1<CR>==")
-vim.keymap.set("n", "<M-Up>", ":m .-2<CR>==")
-vim.keymap.set("v", "<M-Down>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<M-Up>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "<M-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<M-k>", ":m .-2<CR>==")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-Up>", "[{")
 vim.keymap.set("n", "<C-Down>", "]}")
 
@@ -39,6 +39,8 @@ vim.keymap.set("n", "<S-M-f>", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>EN", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>EP", "<cmd>lprev<CR>zz")
 vim.keymap.set('n', '<leader>ce', ':cclose<CR>')
@@ -55,12 +57,6 @@ vim.keymap.set(
 
 vim.keymap.set(
     "n",
-    "<leader>ea",
-    "oassert.NoError(err, \"\")<Esc>F\";a"
-)
-
-vim.keymap.set(
-    "n",
     "<leader>ef",
     "oif err != nil {<CR>}<Esc>Olog.Fatalf(\"error: %s\\n\", err.Error())<Esc>jj"
 )
@@ -71,7 +67,7 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
 )
 
-vim.keymap.set("n", "<leader>ca", function()
+vim.keymap.set("n", "<leader>mr", function()
     require("cellular-automaton").start_animation("make_it_rain")
 end)
 
