@@ -36,8 +36,8 @@ local function toggle_telescope(harpoon_files)
     }):find()
 end
 
-vim.keymap.set("n", "<C-m>", function() toggle_telescope(harpoon:list()) end,
-    { desc = "Open harpoon window" })
+vim.keymap.set("n", "<C-g>", function() toggle_telescope(harpoon:list()) end,
+            { desc = "Open harpoon window" })
 
 
 
