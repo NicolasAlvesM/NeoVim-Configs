@@ -9,10 +9,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-Up>", "[{")
 vim.keymap.set("n", "<C-Down>", "]}")
 
-vim.keymap.set("n", "<C-M-Down>", "yy<Cmd>put<CR>")
-vim.keymap.set("n", "<C-M-Up>", "yyP")
-vim.keymap.set("v", "<C-M-Down>", "y`><Cmd>put<CR>gv")
-vim.keymap.set("v", "<C-M-Up>", "y`<<Cmd>put!<CR>gv")
+vim.keymap.set("n", "<C-M-J>", "yy<Cmd>put<CR>")
+vim.keymap.set("n", "<C-M-K>", "yyP")
+vim.keymap.set("v", "<C-M-J>", "y`><Cmd>put<CR>gv")
+vim.keymap.set("v", "<C-M-K>", "y`<<Cmd>put!<CR>gv")
 
 vim.keymap.set("n", "<leader>b", "<C-O>")
 
